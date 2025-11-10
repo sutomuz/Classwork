@@ -1,6 +1,6 @@
 ---
 title: "Classwork Activity"
-author: "Enter Your Name"
+author: "Johnathan Nguyen"
 output: html_notebook
 ---
 
@@ -27,14 +27,18 @@ head(students)
 
 ```{r}
 # Remove the Name column
+library(dplyr)
+Students_Clean <- students %>% 
+  select(-Name)
 
 ```
 
 
 ### Question:
 Why might someone drop a column like name or ID from a dataset?
-
 ### Answer:
+Because it is redundant to the list of numbers next to it
+
 
 ## Step 3: Visualize
 ```{r}
@@ -74,4 +78,16 @@ ggplot(Students_Clean, aes(x = Major, y = Satisfaction, fill = Major)) +
 6. How could R Markdown help you explain your analysis to someone else?
 
 ### Answers:
+**Step 4:**  
+1. Math students seem to have the most satisfaction while CS students have the lowest median.  The other two majors are between those two.  
+2. This might be due to the workload and student expectations as some people might not have as much fun. An example is CS majors have a lot of coding classes most likely decreasing the satisfaction level.  
+3. No  
+4. Because even though it gives a general idea, the data set is only random. To make it more accurate you would need more observations that just 20.  
 
+**Step 5:**  
+1. Marks changes down in files to be included in the next commit
+2. git commit saves changes to your local, while git push uploads those changes to something like GitHub
+3. it makes it easy to store, save, and backup projects while tracking everything
+4. It lets everyone work on the same project at the same time while not overwriting each others work and shows who did what
+5. A code chunk is used to input code to show outputs like tables and graphs while a regular text you can use to explain the code
+6. It helps show your analysis in one document while also allowing you to explain what you are doing for example you can have a code chunk and then explain what you are doing using regular text.
